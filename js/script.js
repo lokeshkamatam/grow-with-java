@@ -20,8 +20,6 @@ themeBtn.addEventListener("click",()=>{
  document.body.classList.toggle("dark");
  themeBtn.textContent=document.body.classList.contains("dark")?"☀":"☾";
 });
-const menuBtn=document.getElementById("menuBtn");
-menuBtn.addEventListener("click",()=>document.querySelector("nav").classList.toggle("mobile-open"));
 // ===============================
 // Google Login User
 // ===============================
