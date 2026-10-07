@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Details | Grow With Java</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        .details-page {
+            padding: 70px 7% 100px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .back-jobs {
+            display: inline-block;
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .back-jobs:hover {
+            color: #e63969;
+        }
+
+        .job-header {
+            background: white;
+            border: 1px solid #e8e8ee;
+            border-radius: 24px;
+            padding: 35px;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin-bottom: 20px;
+        }
+
+        .job-header-logo {
+            width: 75px;
+            height: 75px;
+            border-radius: 20px;
+            background: #15151a;
+            color: white;
+            display: grid;
+            place-items: center;
+            font-size: 28px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .job-header h1 {
+            font-size: 36px;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+        }
+
+        .job-company {
+            color: #70717b;
+            margin-top: 6px;
+            font-size: 14px;
+        }
+
+        .job-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .job-tags span {
+            background: #f5f5f7;
+            padding: 7px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+        }
+
+        .details-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 20px;
+        }
+
+        .details-content,
+        .apply-box {
+            background: white;
+            border: 1px solid #e8e8ee;
+            border-radius: 22px;
+            padding: 30px;
+        }
+
+        .details-content h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            margin-top: 28px;
+        }
+
+        .details-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .details-content p {
+            font-size: 14px;
+            color: #60616b;
+            line-height: 1.8;
+        }
+
+        .eligibility-list {
+            padding-left: 20px;
+            color: #60616b;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skills span {
+            padding: 8px 12px;
+            border-radius: 9px;
+            background: #fff0f4;
+            color: #e63969;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .apply-box {
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .apply-box h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 13px 0;
+            border-bottom: 1px solid #eeeeF1;
+            font-size: 12px;
+        }
+
+        .info-row span:first-child {
+            color: #777;
+        }
+
+        .info-row span:last-child {
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .apply-button {
+            display: block;
+            width: 100%;
+            margin-top: 22px;
+            background: #15151a;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .apply-button:hover {
+            background: #e63969;
+        }
+
+        .not-found {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        @media(max-width: 800px) {
+
+            .details-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .apply-box {
+                position: static;
+            }
+
+        }
+
+        @media(max-width: 600px) {
+
+            .details-page {
+                padding: 50px 5% 80px;
+            }
+
+            .job-header {
+                padding: 25px;
+                align-items: flex-start;
+            }
+
+            .job-header h1 {
+                font-size: 27px;
+            }
+
+            .job-header-logo {
+                width: 58px;
+                height: 58px;
+                font-size: 21px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a class="brand" href="index.html">
+        <span class="brand-mark">GWJ</span>
+        <span>Grow With <b>Java</b></span>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="index.html#companies">Companies</a>
+        <a href="index.html#experiences">Experiences</a>
+        <a href="index.html#resources">Resources</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button id="themeBtn" class="icon-btn">
+            ☾
+        </button>
+
+        <div id="userArea">
+            <a class="outline-btn" href="login.html">
+                Login
+            </a>
+        </div>
+
+        <button id="menuBtn" class="menu-btn">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<div class="details-page">
+
+    <a href="jobs.html" class="back-jobs">
+        ← Back to Job Updates
+    </a>
+
+
+    <div id="jobContainer">
+
+        <div class="not-found">
+            Loading job...
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-main">
+
+        <div>
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">GWJ</span>
+                <span>Grow With <b>Java</b></span>
+            </a>
+
+            <p>
+                Your daily destination for jobs,
+                hiring updates and tech opportunities.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Explore</h4>
+
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="index.html#companies">Companies</a>
+
+        </div>
+
+        <div>
+
+            <h4>Connect</h4>
+
+            <a
+                href="https://www.instagram.com/grow_with_java/"
+                target="_blank">
+                Instagram
+            </a>
+
+            <a href="#">
+                YouTube
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Grow With Java. All rights reserved.
+        </span>
+
+        <span>
+            Built for the community.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+const params =
+    new URLSearchParams(window.location.search);
+
+const jobId =
+    params.get("id");
+
+const jobContainer =
+    document.getElementById("jobContainer");
+
+
+fetch("data/jobs.json")
+
+    .then(response => response.json())
+
+    .then(jobs => {
+
+       const job = jobs.find(item => String(item.id) === jobId);
+
+
+        if (!job) {
+
+            jobContainer.innerHTML = `
+
+                <div class="not-found">
+
+                    <h2>
+                        Job Not Found
+                    </h2>
+
+                    <p>
+                        This job may have been removed
+                        or the link is incorrect.
+                    </p>
+
+                    <br>
+
+                    <a
+                        href="jobs.html"
+                        class="primary-btn small">
+                        Browse Jobs →
+                    </a>
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        document.title =
+            `${job.title} at ${job.company} | Grow With Java`;
+
+
+        jobContainer.innerHTML = `
+
+            <div class="job-header">
+    <div class="job-header-info">
+        <h1>${job.title || job.company || "Job Opportunity"}</h1>
+        <p>${job.company || ""}</p>
+        <div class="job-meta">
+            ${job.category ? `<span>${job.category}</span>` : ""}
+            ${job.experience ? `<span>${job.experience}</span>` : ""}
+            ${job.type ? `<span>${job.type}</span>` : ""}
+        </div>
+    </div>
+</div>
+
+
+         
+<div class="details-layout">
+
+    <div class="details-content">
+
+        ${job.description && job.description !== "undefined" ? `
+            <h2>Job Description</h2>
+            <p>${job.description}</p>
+        ` : ""}
+
+        ${job.eligibility && job.eligibility !== "undefined" ? `
+            <h2>Eligibility</h2>
+            <ul class="eligibility-list">
+                <li>${job.eligibility}</li>
+                <li>
+                    Candidates should have good communication and
+                    problem-solving skills.
+                </li>
+            </ul>
+        ` : ""}
+
+        ${job.skills && job.skills !== "undefined" ? `
+            <h2>Required Skills</h2>
+            <div class="skills">
+                ${(Array.isArray(job.skills) ? job.skills : job.skills.split(","))
+                    .filter(skill => skill && skill.trim() && skill.trim().toLowerCase() !== "undefined")
+                    .map(skill => `<span>${skill.trim()}</span>`)
+                    .join("")}
+            </div>
+        ` : ""}
+
+    </div>
+</div>
+
+
+                </div>
+
+
+                <aside class="apply-box">
+
+                    <h3>
+                        Job Information
+                    </h3>
+
+
+                    <div class="info-row">
+                        <span>
+                            Company
+                        </span>
+
+                        <span>
+                            ${job.company}
+                        </span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>
+                            Experience
+                        </span>
+
+                        <span>
+                            ${job.experience}
+                        </span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>
+                            Location
+                        </span>
+
+                        <span>
+                            ${job.location}
+                        </span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>
+                            Batch
+                        </span>
+
+                        <span>
+                            ${job.batch}
+                        </span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>
+                            Salary
+                        </span>
+
+                        <span>
+                            ${job.salary}
+                        </span>
+                    </div>
+
+
+                    <div class="info-row">
+                        <span>
+                            Last Date
+                        </span>
+
+                        <span>
+                            ${job.lastDate}
+                        </span>
+                    </div>
+
+
+                    
+
+<a
+    href="${job.applyLink || '#'}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="apply-button">
+    Apply Now →
+</a>
+
+
+                </aside>
+
+
+            </div>
+
+        `;
+
+    })
+
+    .catch(error => {
+
+        console.error(error);
+
+        jobContainer.innerHTML = `
+
+            <div class="not-found">
+
+                <h2>
+                    Something went wrong
+                </h2>
+
+                <p>
+                    Unable to load this job.
+                </p>
+
+            </div>
+
+        `;
+
+    });
+
+</script>
+
+</body>
+</html>

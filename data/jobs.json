@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": 1,
+    "company": "Infosys",
+    "batch": "2024 / 2025 / 2026",
+    "experience": "Freshers",
+    "skills": "Software Development, AI",
+    "applyLink": "https://www.instagram.com/reel/DeHks1USvna/?stkn=MWhmbGIzcXRkcDI0eA=="
+  },
+  {
+    "id": 2,
+    "company": "IBM India Systems Development Lab",
+    "batch": "As per Job Description",
+    "experience": "0 Years / Freshers",
+    "skills": "Software Development",
+    "applyLink": "https://careers.ibm.com/en_US/careers/JobDetail?jobId=132895&source=SN_LinkedIn"
+  },
+  {
+    "id": 3,
+    "company": "Genpact",
+    "batch": "2026",
+    "experience": "Entry Level / Freshers",
+    "skills": "Service Desk, Troubleshooting, Technical Support",
+    "applyLink": "https://genpact.wd108.myworkdayjobs.com/en-US/External_Careers/job/1401-G-India-Floor-1-to-12-Hafeezpet-Phoenix-Hyderabad/Analyst---Service-Desk-5B_JR10026540?utm_source=linkedin&timeType=b2d4bf33c6c710016e205ae736c20000"
+  },
+  {
+    "id": 4,
+    "company": "Amazon",
+    "batch": "2027 Graduates",
+    "experience": "Fresher / Internship",
+    "skills": "Software Development, Coding",
+    "applyLink": "https://www.amazon.jobs/en-gb/jobs/10541345/sde-i-intern-amazon-university-talent-acquisition"
+  },
+  {
+    "id": 5,
+    "company": "Emerson",
+    "batch": "As per Job Description",
+    "experience": "Freshers / Experienced",
+    "skills": "As per Job Description",
+    "applyLink": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26009652"
+  },
+  {
+    "id": 6,
+    "company": "IDFC FIRST Bank",
+    "batch": "As per Job Description",
+    "experience": "As per Job Description",
+    "skills": "Backend Development, Software Engineering, AI",
+    "applyLink": "https://careers.idfcfirst.bank.in/in/en/job/IFBAINP224954ENIN/Backend-Engineer-AI-Labs"
+  },
+  {
+    "id": 7,
+    "company": "Commure",
+    "batch": "As per Job Description",
+    "experience": "As per Job Description",
+    "skills": "Software Engineering",
+    "applyLink": "https://jobs.ashbyhq.com/Commure/b7f99d0b-e511-41ba-a585-ce636f454e99"
+  },
+  {
+    "id": 8,
+    "company": "HackerRank",
+    "batch": "2026 / 2027",
+    "experience": "Internship",
+    "skills": "Software Development, Coding",
+    "applyLink": "https://www.hackerrank.com/careers/job?id=8229735?utm_source=xcareers&utm_medium=community"
+  },
+  {
+    "id": 9,
+    "company": "Atidan Technologies",
+    "batch": "As per Job Description",
+    "experience": "Freshers / Entry Level",
+    "skills": "Software Development",
+    "applyLink": "https://www.linkedin.com/jobs/view/4463794839/"
+  },
+  {
+    "id": 10,
+    "company": "CSG",
+    "batch": "As per Job Description",
+    "experience": "As per Job Description",
+    "skills": "Product Support, Troubleshooting, Issue Resolution, Customer Support",
+    "applyLink": "https://csgi.wd5.myworkdayjobs.com/en-US/CSGCareers/job/Product-Support-Analyst-I_32236"
+  }
+]
