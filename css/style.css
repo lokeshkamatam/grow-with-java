@@ -747,3 +747,22 @@ footer{background:#17171c;color:#fff;padding:65px 7% 25px}.footer-main{display:g
     margin-top: 16px !important;
 }
 
+/* Pink, bold company names */
+.job-card h3,
+.job-card .job-company {
+    color: #ff4081 !important;
+    font-weight: 700 !important;
+}
+
+/* Pink, bold View links */
+.job-card .job-footer a {
+    color: #ff4081 !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+/* Darker pink on hover */
+.job-card .job-footer a:hover {
+    color: #e91e63 !important;
+}
+

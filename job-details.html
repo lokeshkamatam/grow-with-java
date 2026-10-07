@@ -422,130 +422,40 @@ fetch("data/jobs.json")
 
 
          
+
 <div class="details-layout">
+    <div class="job-info-card">
 
-    <div class="details-content">
+        <h2>Job Information</h2>
 
-        ${job.description && job.description !== "undefined" ? `
-            <h2>Job Description</h2>
-            <p>${job.description}</p>
-        ` : ""}
+        <div class="info-row">
+            <span>Company</span>
+            <strong>${job.company || ""}</strong>
+        </div>
 
-        ${job.eligibility && job.eligibility !== "undefined" ? `
-            <h2>Eligibility</h2>
-            <ul class="eligibility-list">
-                <li>${job.eligibility}</li>
-                <li>
-                    Candidates should have good communication and
-                    problem-solving skills.
-                </li>
-            </ul>
-        ` : ""}
+        <div class="info-row">
+            <span>Experience</span>
+            <strong>${job.experience || ""}</strong>
+        </div>
 
-        ${job.skills && job.skills !== "undefined" ? `
-            <h2>Required Skills</h2>
-            <div class="skills">
-                ${(Array.isArray(job.skills) ? job.skills : job.skills.split(","))
-                    .filter(skill => skill && skill.trim() && skill.trim().toLowerCase() !== "undefined")
-                    .map(skill => `<span>${skill.trim()}</span>`)
-                    .join("")}
-            </div>
-        ` : ""}
+        <div class="info-row">
+            <span>Batch</span>
+            <strong>${job.batch || ""}</strong>
+        </div>
+
+        <a href="${job.applyLink || '#'}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="apply-button">
+            Apply Now →
+        </a>
 
     </div>
 </div>
 
 
-                </div>
 
-
-                <aside class="apply-box">
-
-                    <h3>
-                        Job Information
-                    </h3>
-
-
-                    <div class="info-row">
-                        <span>
-                            Company
-                        </span>
-
-                        <span>
-                            ${job.company}
-                        </span>
-                    </div>
-
-
-                    <div class="info-row">
-                        <span>
-                            Experience
-                        </span>
-
-                        <span>
-                            ${job.experience}
-                        </span>
-                    </div>
-
-
-                    <div class="info-row">
-                        <span>
-                            Location
-                        </span>
-
-                        <span>
-                            ${job.location}
-                        </span>
-                    </div>
-
-
-                    <div class="info-row">
-                        <span>
-                            Batch
-                        </span>
-
-                        <span>
-                            ${job.batch}
-                        </span>
-                    </div>
-
-
-                    <div class="info-row">
-                        <span>
-                            Salary
-                        </span>
-
-                        <span>
-                            ${job.salary}
-                        </span>
-                    </div>
-
-
-                    <div class="info-row">
-                        <span>
-                            Last Date
-                        </span>
-
-                        <span>
-                            ${job.lastDate}
-                        </span>
-                    </div>
-
-
-                    
-
-<a
-    href="${job.applyLink || '#'}"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="apply-button">
-    Apply Now →
-</a>
-
-
-                </aside>
-
-
+                
             </div>
 
         `;
